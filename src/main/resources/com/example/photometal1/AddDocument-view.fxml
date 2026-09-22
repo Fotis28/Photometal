@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="500.0" spacing="15.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.photometal1.Controllers.AddDocumentController">
+    <padding><Insets bottom="15.0" left="15.0" right="15.0" top="15.0" /></padding>
+    <children>
+        <Label text="Εισαγωγή Νέας Αναφοράς Εργασίας">
+            <font><Font name="System Bold" size="20.0" /></font>
+        </Label>
+
+        <GridPane hgap="10.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Ημερομηνία" />
+                <Label text="Πάρκο / Κατάστημα" GridPane.rowIndex="1" />
+                <Label text="Πλήθος Parties" GridPane.rowIndex="2" />
+                <Label text="Πλήθος Customers" GridPane.rowIndex="3" />
+                <Label text="Πλήθος Papers" GridPane.rowIndex="4" />
+
+                <DatePicker fx:id="datePicker" GridPane.columnIndex="1" />
+                <ComboBox fx:id="playgroundCombo" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="partiesField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="customersField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="papersField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+
+        <Label text="Πωλήσεις Προϊόντων" />
+      <TableView fx:id="salesTable" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="productColumn" prefWidth="134.0" text="Προιοντα " />
+          <TableColumn fx:id="quantityColumn" prefWidth="334.0" text="Ποσοτητες που πουλησες " />
+        </columns>
+      </TableView>
+        <HBox alignment="CENTER_RIGHT" prefHeight="30.0" spacing="10.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleCancel" text="Ακύρωση" />
+                <Button mnemonicParsing="false" onAction="#handleSave" style="-fx-background-color: #3cb371; -fx-text-fill: white;" text="Αποθήκευση" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

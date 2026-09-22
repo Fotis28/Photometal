@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox alignment="CENTER_LEFT" prefHeight="768.0" prefWidth="1280.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.photometal1.Controllers.DocumentAdminController">
+    <children>
+        <VBox prefHeight="1024.0" prefWidth="320.0" spacing="25.0">
+            <children>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Photometal" textAlignment="CENTER">
+                            <font>
+                                <Font size="50.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <HBox prefHeight="92.0" prefWidth="310.0">
+                    <children>
+                        <Button maxHeight="60.0" maxWidth="220.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="60.0" prefWidth="220.0" text="Home">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                            <font>
+                                <Font size="27.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="50.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="110.0" prefHeight="92.0" prefWidth="310.0">
+                    <children>
+                        <Button maxHeight="60.0" maxWidth="220.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Documents">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                            <font>
+                                <Font size="27.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="50.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            <HBox layoutX="10.0" layoutY="252.0" prefHeight="92.0" prefWidth="310.0">
+               <children>
+                  <Button maxHeight="60.0" maxWidth="220.0" mnemonicParsing="false" onAction="#onPlaygroundsButtonClickADD" prefHeight="60.0" prefWidth="220.0" text="Playgrounds">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="369.0" prefHeight="92.0" prefWidth="310.0">
+               <children>
+                  <Button maxHeight="60.0" maxWidth="220.0" mnemonicParsing="false" onAction="#onProductButtonClick" prefHeight="60.0" prefWidth="220.0" text="Products">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="486.0" prefHeight="92.0" prefWidth="310.0">
+               <children>
+                  <Button maxHeight="60.0" maxWidth="220.0" mnemonicParsing="false" onAction="#openLogView" prefHeight="60.0" prefWidth="220.0" text="Log">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+                <Region VBox.vgrow="ALWAYS" />
+
+                <!-- 🔥 Logout button κάτω-κάτω -->
+                <HBox>
+                    <Button maxHeight="60.0" maxWidth="220.0" onAction="#onLogoutClick" prefHeight="60.0" prefWidth="220.0" text="Logout">
+                        <font>
+                            <Font size="27.0" />
+                        </font>
+                        <HBox.margin>
+                            <Insets left="50.0" />
+                        </HBox.margin>
+                    </Button>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox prefHeight="768.0" prefWidth="947.0">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+            <children>
+                <VBox prefHeight="728.0" prefWidth="848.0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Document">
+                            <font>
+                                <Font name="System Bold" size="32.0" />
+                            </font>
+                        </Text>
+                        <VBox prefHeight="73.0" prefWidth="646.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="646.0" spacing="25.0">
+                                    <padding>
+                                        <Insets left="10.0" top="10.0" />
+                                    </padding>
+                                    <children>
+                              <ComboBox fx:id="listOfPhotographers" prefWidth="150.0" />
+                                    </children>
+                                </HBox>
+                                <Line endX="570.2929077148438" endY="-0.621320366859436" startX="-100.0" />
+                            </children>
+                        </VBox>
+                        <TableView fx:id="tblDocuments" prefHeight="543.0" prefWidth="796.0">
+                            <columns>
+                                <TableColumn fx:id="colPhotographer" prefWidth="120.0" text="Φωτογράφος" />
+                                <TableColumn fx:id="colPlayground" prefWidth="120.0" text="Παιδότοπος" />
+                                <TableColumn fx:id="colDate" prefWidth="200.0" text="Ημερομηνία έκδοσης παραστατικού" />
+                                <TableColumn fx:id="colParties" prefWidth="70.0" text="Πάρτης" />
+                                <TableColumn fx:id="colCustomers" prefWidth="70.0" text="Πελάτες" />
+                                <TableColumn fx:id="colPapers" prefWidth="70.0" text="Χαρτιά" />
+                                <TableColumn fx:id="colTotal" prefWidth="120.0" text="Συνολικά Έσοδα" />
+                            </columns>
+                        </TableView>
+
+                    </children>
+                    <padding>
+                        <Insets left="30.0" right="30.0" top="30.0" />
+                    </padding>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="25.0" right="25.0" top="25.0" />
+            </padding>
+        </VBox>
+    </children>
+</HBox>

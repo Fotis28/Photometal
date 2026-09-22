@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFE0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.photometal1.Controllers.RegisterController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PHOTOMETAL" AnchorPane.leftAnchor="513.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="Outfit Bold" size="36.0" />
+         </font>
+      </Text>
+      <AnchorPane prefHeight="450.0" prefWidth="551.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 20;" AnchorPane.bottomAnchor="135.0" AnchorPane.rightAnchor="365.0">
+         <children>
+            <Label text="Sign Up" AnchorPane.leftAnchor="196.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Outfit SemiBold" size="46.0" />
+               </font>
+            </Label>
+            <VBox spacing="7.0" AnchorPane.bottomAnchor="311.0" AnchorPane.leftAnchor="24.0">
+               <children>
+                  <Label text="Fullname">
+                     <font>
+                        <Font name="Outfit Medium" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fullName" prefHeight="28.0" prefWidth="502.0" style="-fx-border-radius: 12; -fx-background-radius: 12; -fx-border-color: #E8E8E8; -fx-border-width: 1; -fx-font: 16px;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox spacing="7.0" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="24.0">
+               <children>
+                  <Label text="Email">
+                     <font>
+                        <Font name="Outfit Medium" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="email" prefHeight="28.0" prefWidth="502.0" style="-fx-border-radius: 12; -fx-background-radius: 12; -fx-border-color: #E8E8E8; -fx-border-width: 1; -fx-font: 16px;" />
+               </children>
+            </VBox>
+            <VBox spacing="7.0" AnchorPane.bottomAnchor="173.0" AnchorPane.leftAnchor="24.0">
+               <children>
+                  <Label text="Password">
+                     <font>
+                        <Font name="Outfit Medium" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="password" prefHeight="28.0" prefWidth="502.0" style="-fx-border-radius: 12; -fx-background-radius: 12; -fx-border-color: #E8E8E8; -fx-border-width: 1; -fx-font: 16px;" />
+               </children>
+            </VBox>
+            <VBox spacing="7.0" AnchorPane.bottomAnchor="104.0" AnchorPane.leftAnchor="24.0">
+               <children>
+                  <Label text="Confirm Password">
+                     <font>
+                        <Font name="Outfit Medium" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="confirmPassword" prefHeight="28.0" prefWidth="502.0" style="-fx-border-radius: 12; -fx-background-radius: 12; -fx-border-color: #E8E8E8; -fx-border-width: 1; -fx-font: 16px;" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#onButtonRegister" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: #FFFF6F; -fx-background-radius: 18; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 20, 0, 0, 4);" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="218.0">
+               <graphic>
+                  <Label text="Sign Up">
+                     <font>
+                        <Font name="Outfit Black" size="16.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button layoutX="233.0" layoutY="407.0" mnemonicParsing="false" onAction="#onButtonLogin" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="169.0">
+               <graphic>
+                  <Label text="Already have an account? Log in">
+                     <font>
+                        <Font name="Outfit Medium" size="14.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

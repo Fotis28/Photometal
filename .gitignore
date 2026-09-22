@@ -1,0 +1,32 @@
+
+# Secrets
+src/main/resources/db.properties
+*.env
+ 
+# Build output
+target/
+bin/
+out/
+ 
+# Jars (the PostgreSQL driver comes from Maven)
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+ 
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+ 
+# Editor backups
+*~
+*.bak
+ 
+# OS
+.DS_Store
+Thumbs.db
+ 
