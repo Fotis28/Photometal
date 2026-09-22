@@ -7,6 +7,12 @@ manage products, playgrounds, stock per playground, users, and an audit trail of
 Built with **JavaFX** and **PostgreSQL**. Most business logic lives in the database
 (stored functions, procedures and triggers), with a thin Java data-access layer on top.
 
+## Screenshots
+
+| Login | Admin view | Audit log |
+|---|---|---|
+| ![Login](docs/login.png) | ![Admin view](docs/admin-home.png) | ![Audit log](docs/log-audit.png) |
+
 ## Features
 
 - Login, registration and password reset, with passwords hashed by bcrypt (`pgcrypto`)

@@ -1363,10 +1363,10 @@ AS $$
 BEGIN
 RETURN QUERY
 SELECT
-    p.id          AS product_id,
-    p.name        AS product_name,
-    p.description AS product_description,
-    SUM(rd.quantity_sold) AS total_sold
+    p.id                  AS product_id,
+    p.name                AS product_name,
+    SUM(rd.quantity_sold) AS total_sold,
+    p.description         AS product_description
 FROM report_details rd
          JOIN work_reports wr
               ON wr.id = rd.work_report_id
@@ -1375,7 +1375,7 @@ FROM report_details rd
          JOIN products p
               ON p.id = rd.product_id
 WHERE ph.user_id = p_user_id
-GROUP BY p.id, p.name
+GROUP BY p.id, p.name, p.description
 ORDER BY total_sold DESC
     LIMIT p_limit;
 END;
