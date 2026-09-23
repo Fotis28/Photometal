@@ -55,6 +55,8 @@ Requirements: JDK 23+, PostgreSQL 14+ running on `localhost:5432`.
 ```
 2. Open `src/main/java/com/example/photometal1/Database/Database_Connection.java`
    and set `user` and `password` to match your local PostgreSQL installation.
+   The database name in the JDBC URL is `Photometal` with a capital P: PostgreSQL treats
+   database names as case-sensitive, so it must be created exactly as shown above.
 3. Run the app:
 ```bash
    ./mvnw clean javafx:run        # Linux / macOS
@@ -69,7 +71,7 @@ This was a two-person university project.
 - **Me:** the entire database side. That covers the PostgreSQL schema, all stored functions and procedures,
   the triggers (audit log, soft delete, stock initialisation), password hashing, and the
   Java data-access layer (`Dao/`, `Database/`).
--  **[Lampros](https://github.com/Lampirikios):** the JavaFX user interface (controllers and FXML views).
+- **[Lampros](https://github.com/Lampirikios):** the JavaFX user interface (controllers and FXML views).
 
 ## Known limitations
 
