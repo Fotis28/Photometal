@@ -77,3 +77,11 @@ This was a two-person university project.
 
 - Password reset does not verify ownership of the email address (no confirmation code is sent).
   In a production system this would require an email verification step.
+
+## License
+
+Copyright (c) 2026 Fotis Singiridis. All rights reserved.
+
+This code is published for portfolio purposes: you are welcome to read it and run it locally,
+but it may not be reused, redistributed or used commercially without permission.
+See [LICENSE](LICENSE).
